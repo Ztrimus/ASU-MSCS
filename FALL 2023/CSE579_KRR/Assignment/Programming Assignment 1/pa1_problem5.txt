@@ -1,0 +1,5 @@
+1 {a(ROW,COL,N): ROW=1..9, COL=1..9, ROW1<=ROW, ROW<=ROW1+2, COL1<=COL, COL<=COL1+2} 1 :- N=1..9, ROW1 = 3*(0..2)+1, COL1 = 3*(0..2)+1.
+:- a(ROW,COL,N), a(ROW,COL,N1), N!=N1.
+:- a(ROW,COL,N), a(ROW,COL1,N), COL!=COL1.
+:- a(ROW,COL,N), a(ROW1,COL,N), ROW!=ROW1.
+:- a(ROW,COL,N), a(ROW1,COL1,N), ROW\3 == ROW1\3, COL\3 == COL1\3, 1{ROW != ROW1; COL != COL1}.
