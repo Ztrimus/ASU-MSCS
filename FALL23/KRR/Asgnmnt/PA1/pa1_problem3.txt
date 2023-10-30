@@ -1,0 +1,13 @@
+% -----------------------------------------------------------------------
+% Author: Saurabh Zinjad
+% Developer Email: zinjadsaurabh1997@gmail.com
+% File: pa1_problem3.txt
+% Creation Time: Oct 15th 2023 4:52 pm
+% Copyright (c) 2023 Saurabh Zinjad. All rights reserved | GitHub: Ztrimus
+% -----------------------------------------------------------------------
+
+1 {a(ROW,COL,N): ROW=1..9, COL=1..9, ROW_1<=ROW, ROW<=ROW_1+2, COL_1<=COL, COL<=COL_1+2} 1 
+:- N=1..9, ROW_1 = 3*(0..2)+1, COL_1 = 3*(0..2)+1.
+:- a(ROW,COL,N), a(ROW,COL,N1), N!=N1.
+:- a(ROW,COL,N), a(ROW,COL_1,N), COL!=COL_1.
+:- a(ROW,COL,N), a(ROW_1,COL,N), ROW!=ROW_1.
