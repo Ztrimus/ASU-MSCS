@@ -1,0 +1,4 @@
+%%%% File: a2_p3_blocks_instances.txt %%%%
+block(x1;x2;x3;x4;x5;x6;x7;x8;x9;x10;x11;x12;x13;x14;x15).
+:- not on(x13,table,0;x12,x13,0;x1,x12,0;x2,x1,0;x3,x2,0;x15,table,0;x14,x15,0;x4,x14,0;x5,x4,0;x10,x5,0;x11,x10,0;x6,table,0;x7,x6,0;x8,x7,0;x9,x8,0).
+:- not on(x5,x10,m; x1,x5,m; x14,x1,m; x9,x4,m; x8,x9,m; x13,x8,m; x15,x13,m; x11,x7,m; x3,x11,m; x2,x3,m; x12,x2,m).
