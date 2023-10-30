@@ -1,4 +1,0 @@
-1 {a(ROW,COL,N): ROW=1..16, COL=1..16, ROW1<=ROW, ROW<=ROW1+3, COL1<=COL, COL<=COL1+3} 1 :- N=1..16, ROW1 = 4*(0..3)+1, COL1 = 4*(0..3)+1.
-:- a(ROW,COL,N), a(ROW,COL,N1), N!=N1.
-:- a(ROW,COL,N), a(ROW,COL1,N), COL!=COL1.
-:- a(ROW,COL,N), a(ROW1,COL,N), ROW!=ROW1.

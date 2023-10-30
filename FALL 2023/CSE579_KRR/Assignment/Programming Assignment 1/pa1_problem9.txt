@@ -1,2 +1,0 @@
-1 {add_function(ROW,1..k)} 1 :- ROW=1..n.
-:- add_function(ROW,A), add_function(COL,A), add_function(ROW+COL,A), ROW!=COL.

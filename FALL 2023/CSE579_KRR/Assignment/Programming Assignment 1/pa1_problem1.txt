@@ -1,6 +1,0 @@
-% clingo -c n=8 pa1_problem1.txt 0
-
-{queen_function(R, 1..n)}=1:-R=1..n.
-:-queen_function(R1,C),queen_function(R2,C),R1!=R2.
-:-queen_function(R1,C1),queen_function(R2,C2),R1!=R2,|R1-R2|=|C1-C2|.
-:-queen_function(R,C),R=3..6,C=3..6.

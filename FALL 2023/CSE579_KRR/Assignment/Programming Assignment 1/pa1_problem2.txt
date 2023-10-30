@@ -1,3 +1,0 @@
-{queen_function(ROW, 1..n)}=1:-ROW=1..n.
-:-queen_function(ROW_1,COL),queen_function(ROW_2,COL),ROW_1!=ROW_2.
-:-queen_function(ROW_1,COL_1),queen_function(ROW_2,COL_2),ROW_1!=ROW_2,|ROW_1-ROW_2|=|COL_1-COL_2|.
