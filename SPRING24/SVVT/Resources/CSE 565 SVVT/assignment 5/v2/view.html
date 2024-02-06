@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View</title>
+    <link rel="stylesheet" href="output.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body class="max-w-3xl mx-auto my-20">
+    <a href="index.html" id="back" class="btn mb-4 !bg-gray-600">All Todos</a>
+    <div x-data="{
+        todo: {},
+        init(){
+            this.todo = JSON.parse(localStorage['todo'])
+        }
+    }">
+        <p class="text-3xl font-semibold mb-6 text-left" x-text="todo.title"></p>
+    </div>
+    <div class="mb-4">
+        <label for="completed">Already Completed?</label>
+        <input type="checkbox" name="completed" id="completed" class="form-checkbox" x-model="input.completed">
+    </div>
+    <div>
+        <input type="radio" id="urgent" name="urgency" value="urgent">
+        <label for="urgent">Urgent</label>
+        <input type="radio" id="notUrgent" name="urgency" value="notUrgent">
+        <label for="notUrgent">Not Urgent</label>
+    </div>
+    <!-- add notes -->
+    <div class="mt-8">
+        <label for="notes" class="text-xl font-semibold">Notes</label>
+        <textarea name="notes" id="" class="form-input" cols="30" rows="10"></textarea>
+    </div>
+    <a href="todos.html" class="btn mt-4">Save Changes</a>
+</body>
+
+</html>

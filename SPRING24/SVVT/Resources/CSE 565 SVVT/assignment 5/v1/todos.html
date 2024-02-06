@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos</title>
+    <link rel="stylesheet" href="output.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body class="max-w-3xl mx-auto my-20 bg-gray-50">
+    <div x-data="{
+        user: {},
+        todos: [
+            {id: 1, title: 'Learn AlpineJS', completed: false},
+            {id: 2, title: 'Learn VueJS', completed: false},
+            {id: 3, title: 'Learn ReactJS', completed: false},
+            {id: 4, title: 'Learn Svelte', completed: false},
+        ],
+        input: {
+            title: '',
+            completed: false
+        },
+        addTodo() {
+            if (!this.input.title) return;
+            this.todos.push({
+                id: this.todos.length + 1,
+                title: this.input.title,
+                completed: this.input.completed
+            })
+            this.input.title = ''
+            this.input.completed = false
+        },
+        removeTodo(index) {
+            this.todos.splice(index, 1)
+        },
+        toggleCompleted(todo) {
+            todo.completed = !todo.completed
+        },
+        view(index){
+            //set todo in local storage
+            localStorage.setItem('todo', JSON.stringify(this.todos[index]))
+            localStorage.setItem('todos', JSON.stringify(this.todos))
+            window.location.href = 'view.html';
+        }
+    }">
+        <div>
+            <h1 class="text-4xl font-bold mb-8" id="welcome">Greetings</h1>
+            <div>
+            <h3 class="text-2xl font-medium mb-6">Add Tasks To do</h3>
+            <div class="space-y-4 shadow-md rounded-md bg-white py-4 px-8">
+                <div>
+                    <label for="title">Title of Task</label>
+                    <input type="text" name="title" id="title" class="form-input" x-model="input.title"
+                        @keyup.enter="addTodo">
+                </div>
+                <div>
+                    <label for="completed">Completed</label>
+                    <input type="checkbox" name="completed" id="completed" class="form-checkbox"
+                        x-model="input.completed">
+                </div>
+                <div>
+                    <button class="btn" @click="addTodo" id="addTodo">Add</button>
+                </div>
+            </div>
+            </div>
+            <div class="my-20">
+                <h3 class="text-2xl font-medium mb-4">Todos</h3>
+                <div class="max-h-96 space-y-4 overflow-y-auto shadow-md rounded-md bg-white py-4 px-8">
+                    <template x-for="(todo, index) in todos" :key="todo.id">
+                        <div class="flex items-center space-x-4">
+                            <span x-text="todo.title" :class="{'line-through': todo.completed}"></span>
+                            <button class="btn" @click="view(index)">View</button>
+                            <button class="btn !bg-red-600" @click="removeTodo(index)">Remove</button>
+                            <button class="btn" @click="toggleCompleted(todo)"
+                                :class="{'!bg-green-600': !todo.completed, '!bg-gray-600': todo.completed}"
+                                x-text="todo.completed ? 'Mark as Incomplete' : 'Mark as Completed'">
+                                ></button>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

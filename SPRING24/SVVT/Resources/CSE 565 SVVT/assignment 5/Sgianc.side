@@ -1,0 +1,185 @@
+{
+  "id": "8634c5ee-e35b-4ab2-9090-bfddcb51e05a",
+  "version": "2.0",
+  "name": "Final",
+  "url": "http://0.0.0.0:8000/",
+  "tests": [{
+    "id": "78e20478-0ab0-410d-aef3-87dbc7266a68",
+    "name": "Custom",
+    "commands": [{
+      "id": "c491694c-e9d1-410c-9db7-a85a4fce4537",
+      "comment": "",
+      "command": "open",
+      "target": "index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a7f0b1c7-4a56-4ba1-a6d7-8d93087e8616",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//img[@id='logo' and @height=\"150\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "efa169e9-6794-4609-88aa-62788bf4bffc",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=name", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Sid"
+    }, {
+      "id": "f8cc5493-65ca-45f8-865f-9888d91b0b51",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "sgianc@asu.edu"
+    }, {
+      "id": "5b07a0d0-98a6-42ee-958b-6cc63e2842b9",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "sgianc"
+    }, {
+      "id": "b5d4f595-4847-4325-9c5a-a3211aa7cdff",
+      "comment": "",
+      "command": "verifyText",
+      "target": "//h1[@id=\"heading\"]",
+      "targets": [],
+      "value": "User"
+    }, {
+      "id": "2fedd511-3888-4a9c-afd2-f72dc7070ead",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "//*[@type='submit']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b33c98ef-5f4f-4019-9a69-d8520fd441e6",
+      "comment": "",
+      "command": "click",
+      "target": "//*[@type='submit']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d8c8f66e-95a2-4f12-b50d-42c403b9cf5b",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.flex:nth-child(2) > .\\!bg-green-600",
+      "targets": [
+        ["css=.flex:nth-child(2) > .\\!bg-green-600", "css:finder"],
+        ["xpath=//button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'Mark as Completed')]", "xpath:innerText"]
+      ],
+      "value": "Mark as Completed"
+    }, {
+      "id": "9c2f1ab2-fd07-4fe1-9a28-7890ad358651",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "${currentLoc}"
+    }, {
+      "id": "fd411e20-5b93-4ef1-bb78-94f29f97015a",
+      "comment": "",
+      "command": "assert",
+      "target": "${currentLoc}",
+      "targets": [],
+      "value": "http://0.0.0.0:8000/todos.html"
+    }, {
+      "id": "74507ce2-5f37-4dea-bfce-c04cf4167ed9",
+      "comment": "",
+      "command": "type",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=title", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Test Todo"
+    }, {
+      "id": "9d8789ac-cc1c-40c8-8fe2-06c9a4bc3286",
+      "comment": "",
+      "command": "click",
+      "target": "id=addTodo",
+      "targets": [
+        ["id=addTodo", "id"],
+        ["css=#addTodo", "css:finder"],
+        ["xpath=//button[@id='addTodo']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Todo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c2345a1-c378-4363-a8a8-60976f7f3ec6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.flex:nth-child(2) > .btn:nth-child(2)",
+      "targets": [
+        ["css=.flex:nth-child(2) > .btn:nth-child(2)", "css:finder"],
+        ["xpath=//div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'View')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cba2e41c-fd35-4fe6-8598-b8be652bc9ce",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[@id=\"back\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ff71be9d-8709-42b3-a3c5-162d383d68b9",
+      "comment": "",
+      "command": "click",
+      "target": "//a[@id=\"back\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "54eadd65-72e7-4ae7-b3fb-c9dc8a1d4e0c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "${currentLoc}"
+    }, {
+      "id": "1bd701f4-067e-41bb-9f24-b89fb163a46e",
+      "comment": "",
+      "command": "assert",
+      "target": "${currentLoc}",
+      "targets": [],
+      "value": "http://0.0.0.0:8000/todos.html"
+    }]
+  }],
+  "suites": [{
+    "id": "8486da83-d1c2-431c-bb97-bbdd85cb02fd",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://127.0.0.1:5500/", "http://127.0.0.1:5500/v1", "http://0.0.0.0:8000/"],
+  "plugins": []
+}

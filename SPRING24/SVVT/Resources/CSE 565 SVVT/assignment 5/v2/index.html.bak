@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body class="max-w-3xl mx-auto my-20">
+    <img src="logo.png" class="mx-auto" id="logo" alt="" width="50">
+    <h1 class="text-4xl font-semibold mt-12 mb-6 hidden"></h1>
+    <form action="GET" class=" space-y-4" onsubmit="submitForm()">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" class="form-input">
+        </div>
+        <div>
+            <label for="email">Email Address</label>
+            <input type="email" name="email" id="email" class="form-input">
+        </div>
+        <div>
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" class="form-input">
+        </div>
+
+        <!-- Gender radio buttons -->
+        <div>
+            <label for="gender">Gender</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender" value="non-binary">
+            <label for="female">Non-Binary</label>
+        </div>
+
+        <!-- Specialization -->
+        <div>
+            <label for="specialization">Specialized in:</label>
+            <select name="specialization" id="specialization" class="form-input">
+                <option value="web">Web</option>
+                <option value="mobile">Mobile</option>
+                <option value="desktop">Desktop</option>
+            </select>
+        </div>
+
+        <!-- Remember Me -->
+        <div>
+            <input type="checkbox" name="remember" id="remember">
+            <label for="remember">Remember this for future</label>
+        </div>
+
+        <!-- button: Register -->
+        <div>
+            <button type="submit" class="btn">Register</button>
+            <button type="reset" class="btn">Reset</button>
+        </div>
+
+
+
+    </form>
+    <script>
+        function submitForm() {
+            // redirect to todos.html
+            event.preventDefault();
+            // save data to local storage
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let username = document.getElementById("username").value;
+            let gender = document.querySelector("input[name=gender]").value;
+            let specialization = document.getElementById("specialization").value;
+            let remember = document.getElementById("remember").checked;
+            const user = {
+                name,
+                email,
+                username,
+                gender,
+                specialization,
+                remember
+            }
+            localStorage.removeItem("users");
+            localStorage.setItem("user", JSON.stringify(user));
+            window.location.href = "todos.html";
+            return;
+        }
+    </script>
+</body>
+</html>
