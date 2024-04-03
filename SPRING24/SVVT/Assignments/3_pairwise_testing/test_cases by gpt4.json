@@ -1,0 +1,218 @@
+{
+    "testCases": [
+        {
+            "Type of Phone": "iPhone 14",
+            "Authentication": "Fingerprint",
+            "Connectivity": "Wireless",
+            "Memory": "128 GB",
+            "Battery Level": "< 20 %"
+        },
+        {
+            "Type of Phone": "iPhone 14",
+            "Authentication": "Face recognition",
+            "Connectivity": "3G",
+            "Memory": "256 GB",
+            "Battery Level": "20-39%"
+        },
+        {
+            "Authentication": "Fingerprint",
+            "Connectivity": "3G",
+            "Memory": "256 GB",
+            "Battery Level": "20-39%",
+            "Type of Phone": "iPhone 13"
+        },
+        {
+            "Connectivity": "Wireless",
+            "Memory": "256 GB",
+            "Battery Level": "20-39%",
+            "Type of Phone": "iPhone 14",
+            "Authentication": "Text Password"
+        },
+        {
+            "Memory": "128 GB",
+            "Battery Level": "20-39%",
+            "Type of Phone": "iPhone 14",
+            "Connectivity": "4G LTE",
+            "Authentication": "Fingerprint"
+        },
+        {
+            "Type of Phone": "iPhone 14",
+            "Memory": "512 GB",
+            "Battery Level": "40-59%",
+            "Authentication": "Fingerprint",
+            "Connectivity": "Wireless"
+        },
+        {
+            "Memory": "128 GB",
+            "Battery Level": "40-59%",
+            "Type of Phone": "iPhone 14",
+            "Connectivity": "5G Edge",
+            "Authentication": "Fingerprint"
+        },
+        {
+            "Type of Phone": "iPhone 14",
+            "Memory": "1 TB",
+            "Battery Level": "60-79%",
+            "Authentication": "Fingerprint",
+            "Connectivity": "Wireless"
+        },
+        {
+            "Memory": "128 GB",
+            "Battery Level": "60-79%",
+            "Type of Phone": "iPhone 13",
+            "Authentication": "Face recognition",
+            "Connectivity": "Wireless"
+        },
+        {
+            "Type of Phone": "iPhone 14",
+            "Battery Level": "80-100%",
+            "Authentication": "Fingerprint",
+            "Connectivity": "3G",
+            "Memory": "128 GB"
+        },
+        {
+            "Connectivity": "Wireless",
+            "Battery Level": "80-100%",
+            "Type of Phone": "iPhone 13",
+            "Authentication": "Text Password",
+            "Memory": "512 GB"
+        },
+        {
+            "Type of Phone": "iPhone 13",
+            "Battery Level": "< 20 %",
+            "Authentication": "Face recognition",
+            "Connectivity": "3G",
+            "Memory": "256 GB"
+        },
+        {
+            "Type of Phone": "Galaxy Z",
+            "Authentication": "Fingerprint",
+            "Connectivity": "3G",
+            "Memory": "512 GB",
+            "Battery Level": "40-59%"
+        },
+        {
+            "Type of Phone": "iPhone 13",
+            "Connectivity": "4G LTE",
+            "Authentication": "Face recognition",
+            "Memory": "512 GB",
+            "Battery Level": "40-59%"
+        },
+        {
+            "Type of Phone": "Galaxy Z",
+            "Authentication": "Face recognition",
+            "Connectivity": "5G Edge",
+            "Memory": "1 TB",
+            "Battery Level": "80-100%"
+        },
+        {
+            "Type of Phone": "iPhone 13",
+            "Connectivity": "5G Edge",
+            "Memory": "1 TB",
+            "Authentication": "Text Password",
+            "Battery Level": "< 20 %"
+        },
+        {
+            "Connectivity": "3G",
+            "Memory": "1 TB",
+            "Type of Phone": "Galaxy Z",
+            "Authentication": "Text Password",
+            "Battery Level": "60-79%"
+        },
+        {
+            "Memory": "256 GB",
+            "Battery Level": "40-59%",
+            "Type of Phone": "Galaxy Z",
+            "Connectivity": "Wireless",
+            "Authentication": "Text Password"
+        },
+        {
+            "Type of Phone": "Galaxy Z",
+            "Memory": "128 GB",
+            "Authentication": "Text Password",
+            "Connectivity": "4G LTE",
+            "Battery Level": "< 20 %"
+        },
+        {
+            "Memory": "256 GB",
+            "Battery Level": "60-79%",
+            "Type of Phone": "Huawei Mate",
+            "Authentication": "Fingerprint",
+            "Connectivity": "4G LTE"
+        },
+        {
+            "Memory": "256 GB",
+            "Battery Level": "80-100%",
+            "Type of Phone": "Huawei Mate",
+            "Authentication": "Face recognition",
+            "Connectivity": "Wireless"
+        },
+        {
+            "Memory": "512 GB",
+            "Battery Level": "< 20 %",
+            "Type of Phone": "Huawei Mate",
+            "Authentication": "Text Password",
+            "Connectivity": "3G"
+        },
+        {
+            "Type of Phone": "Galaxy Z",
+            "Battery Level": "20-39%",
+            "Connectivity": "4G LTE",
+            "Memory": "1 TB"
+        },
+        {
+            "Memory": "512 GB",
+            "Battery Level": "20-39%",
+            "Type of Phone": "Google Pixel 7",
+            "Authentication": "Fingerprint",
+            "Connectivity": "5G Edge"
+        },
+        {
+            "Type of Phone": "Huawei Mate",
+            "Memory": "128 GB",
+            "Connectivity": "4G LTE",
+            "Battery Level": "80-100%"
+        },
+        {
+            "Type of Phone": "Google Pixel 7",
+            "Authentication": "Face recognition",
+            "Connectivity": "5G Edge",
+            "Memory": "256 GB",
+            "Battery Level": "60-79%"
+        },
+        {
+            "Memory": "512 GB",
+            "Battery Level": "60-79%",
+            "Type of Phone": "Google Pixel 7",
+            "Authentication": "Text Password",
+            "Connectivity": "Wireless"
+        },
+        {
+            "Type of Phone": "Huawei Mate",
+            "Connectivity": "5G Edge",
+            "Memory": "1 TB",
+            "Battery Level": "20-39%"
+        },
+        {
+            "Type of Phone": "Google Pixel 7",
+            "Memory": "128 GB",
+            "Connectivity": "3G",
+            "Battery Level": "< 20 %"
+        },
+        {
+            "Type of Phone": "Huawei Mate",
+            "Battery Level": "40-59%",
+            "Memory": "1 TB"
+        },
+        {
+            "Type of Phone": "Google Pixel 7",
+            "Connectivity": "4G LTE",
+            "Memory": "1 TB",
+            "Battery Level": "40-59%"
+        },
+        {
+            "Type of Phone": "Google Pixel 7",
+            "Battery Level": "80-100%"
+        }
+    ]
+}

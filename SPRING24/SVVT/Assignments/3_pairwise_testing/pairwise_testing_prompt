@@ -1,0 +1,49 @@
+Given a list of parameters for a mobile application and their possible values, generate a set of test cases using the pairwise combination testing technique, formatted as a JSON object. Each test case should combine values from each pair of parameters at least once across the set to ensure comprehensive coverage with minimal redundancy. 
+
+### Parameters and Values:
+- Type of Phone: ["iPhone 14", "iPhone 13", "Galaxy Z", "Huawei Mate", "Google Pixel 7"]
+- Authentication: ["Fingerprint", "Face recognition", "Text Password"]
+- Connectivity: ["Wireless", "3G", "4G LTE", "5G Edge"]
+- Memory: ["128 GB", "256 GB", "512 GB", "1 TB"]
+- Battery Level: ["< 20 %", "20-39%", "40-59%", "60-79%", "80-100%"]
+
+### Instructions:
+1. For each pair of parameters, ensure every possible combination appears at least once across all test cases.
+2. Format the output as a JSON object with an array of test cases, where each test case is represented as an object mapping parameters to their chosen values.
+3. Aim for minimal redundancy while covering all necessary pairwise combinations.
+
+### Example Input:
+- **Operating System**: ["Android", "iOS"]
+- **Connection Type**: ["WiFi", "Cellular"]
+- **App Version**: ["1.0", "2.0"]
+
+### Desired JSON Output Format:
+```json
+{
+  "testCases": [
+    {
+      "Operating System": "Android",
+      "Connection Type": "WiFi",
+      "App Version": "1.0"
+    },
+    {
+      "Operating System": "Android",
+      "Connection Type": "Cellular",
+      "App Version": "2.0"
+    },
+    {
+      "Operating System": "iOS",
+      "Connection Type": "Cellular",
+      "App Version": "1.0"
+    },
+    {
+      "Operating System": "iOS",
+      "Connection Type": "WiFi",
+      "App Version": "2.0"
+    },
+  ]
+}
+```
+
+### Task:
+Generate the test cases in the specified JSON format, ensuring that each test case is a unique combination of parameter values, and all pairwise combinations are covered with the smallest number of test cases possible.
