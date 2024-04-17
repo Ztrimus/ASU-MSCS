@@ -11,7 +11,7 @@
 exports.config = {
     directConnect: true, // lets Protractor connect directly to the browser without using a Selenium server
     framework: 'jasmine', // using the Jasmine test framework
-    specs: ['e2e/**/*.spec.js'], // specifies where your test files are located
+    specs: ['e2e/**/*.spec.ts'], // specifies where your test files are located
     capabilities: {
         browserName: 'chrome' // specifies which browser to use for testing
     },
