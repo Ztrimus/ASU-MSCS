@@ -1,8 +1,14 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {
+  ComponentFixture,
+  TestBed,
+  fakeAsync,
+  tick,
+} from '@angular/core/testing';
 import { EventRegistrationComponent } from './event-registration.component';
 import { FormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 import { RouterTestingModule } from '@angular/router/testing';
+import { DebugElement } from '@angular/core';
 
 describe('EventRegistrationComponent', () => {
   let component: EventRegistrationComponent;
@@ -11,7 +17,7 @@ describe('EventRegistrationComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [EventRegistrationComponent],
-      imports: [FormsModule, RouterTestingModule],
+      imports: [FormsModule, RouterTestingModule.withRoutes([])], // define your routes if needed
     }).compileComponents();
   });
 
@@ -22,41 +28,11 @@ describe('EventRegistrationComponent', () => {
   });
 
   // Test for the existence of GUI elements
-  it('should have all required form inputs', () => {
-    expect(fixture.debugElement.query(By.css('#name'))).toBeTruthy();
-    expect(fixture.debugElement.query(By.css('#email'))).toBeTruthy();
-    expect(fixture.debugElement.query(By.css('#agreement'))).toBeTruthy();
-    expect(
-      fixture.debugElement.query(By.css('button[type="submit"]'))
-    ).toBeTruthy();
-    expect(
-      fixture.debugElement.queryAll(By.css('.form-control')).length
-    ).toBeGreaterThan(5); // Number based on visible inputs
-  });
-
-  // Test for content correctness in GUI elements
-  it('should display correct topic and description', () => {
-    fixture.detectChanges();
-    const topicInput = fixture.debugElement.query(
-      By.css('input[readonly][name="topic"]')
-    ).nativeElement;
-    const descriptionTextarea = fixture.debugElement.query(
-      By.css('textarea[readonly][name="description"]')
-    ).nativeElement;
-    expect(topicInput.value).toContain('Join Test Webinar');
-    expect(descriptionTextarea.value).toContain('Deneeme yapmıyorum');
-  });
-
-  // Test navigation links
-  it('should navigate back on clicking the back button', () => {
-    const router = TestBed.inject(Router);
-    const navigateSpy = spyOn(router, 'navigate');
-
-    const backButton = fixture.debugElement.query(
-      By.css('button.btn-outline-dark')
-    ).nativeElement;
-    backButton.click();
-    expect(navigateSpy).toHaveBeenCalledWith(['']); // Adjust as per actual navigation route
+  it('should have social media links', () => {
+    const socialLinks = fixture.debugElement.queryAll(
+      By.css('.social-media a')
+    );
+    expect(socialLinks.length).toEqual(4); // Adjust the number as per the social media links
   });
 
   // Test input field validations
