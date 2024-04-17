@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 import { RouterTestingModule } from '@angular/router/testing';
 import { DebugElement } from '@angular/core';
+import { NgModel } from '@angular/forms';
 
 describe('EventRegistrationComponent', () => {
   let component: EventRegistrationComponent;
