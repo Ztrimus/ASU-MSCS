@@ -1,0 +1,65 @@
+// // confirmation.component.scss
+// .confirmation-card {
+//     background-color: #A2D9CE; // Or use the color that matches the provided image
+//     padding: 50px;
+//     border-radius: 10px;
+//     margin-top: 50px; // Adjust the margin as per your layout
+  
+//     h2 {
+//       margin-bottom: 25px;
+//     }
+  
+//     .btn {
+//       margin: 5px; // Space out the buttons
+//     }
+  
+//     .btn-outline-secondary {
+//       color: #333; // Or your preferred color
+//       border-color: #333; // Match border color with text
+//       &:hover {
+//         background-color: #333;
+//         color: white;
+//       }
+//     }
+  
+//     .btn-warning {
+//       color: white; // Color for text inside the warning button
+//       background-color: #f0ad4e; // Bootstrap's warning color
+//       &:hover {
+//         background-color: darken(#f0ad4e, 10%);
+//       }
+//     }
+//   }
+
+  // confirmation.component.scss
+.confirmation-card {
+    background-image: linear-gradient(to right, #56CCF2, #2F80ED); /* This creates a blue gradient. Adjust the colors to match your branding. */
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; /* For positioning the heart icon correctly */
+  }
+  
+  .banner-text {
+    position: relative; /* Ensures that the icon can be positioned with absolute */
+    padding: 0 20px;
+    display: inline-block; /* Wraps the background closely around the text */
+    background: #ffffff52; /* Semi-transparent white background */
+    border-radius: 25px; /* Rounded edges */
+    margin-top: -40px; /* Pulls the banner up to overlap the card */
+  }
+  
+  .fas.fa-heart {
+    color: #e25555; /* Give the heart icon a soft red color */
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+  }
+  
+  .text-white {
+    color: #ffffff;
+  }
+  
+  /* Include other styles from previous code if necessary */
+  

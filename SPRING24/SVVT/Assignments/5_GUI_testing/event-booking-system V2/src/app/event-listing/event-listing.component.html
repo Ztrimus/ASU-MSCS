@@ -1,0 +1,96 @@
+<!-- event-listing.component.html
+<div class="container">
+    <input type="text" class="form-control mb-3" placeholder="Search events" [(ngModel)]="searchTerm">
+    <div *ngFor="let event of events | filter: searchTerm" class="card mb-3">
+      <img [src]="event.image" class="card-img-top" alt="Event Image">
+      <div class="card-body">
+        <h5 class="card-title">{{ event.title }}</h5>
+        <p class="card-text">{{ event.description }}</p>
+        <button (click)="navigateToRegistration(event.id)" class="btn btn-primary">Register</button>
+      </div>
+    </div>
+  </div>
+   -->
+
+
+<!-- event-listing.component.html -->
+<!-- <div class="container mt-4">
+  <input type="text" class="form-control mb-4" placeholder="Search events" [(ngModel)]="searchTerm">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div *ngFor="let event of events | filter: searchTerm" class="col">
+      <div class="card h-100">
+        <img [src]="event.image" class="card-img-top" alt="Event Image">
+        <div class="card-body">
+          <h5 class="card-title">{{ event.title }}</h5>
+          <p class="card-text">{{ event.description }}</p>
+        </div>
+        <div class="card-footer">
+          <button (click)="navigateToRegistration(event.id)" class="btn btn-primary">Register</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<!-- event-listing.component.html -->
+<!-- <div class="container mt-4">
+  <div class="search-box mb-4">
+    <input type="text" class="form-control" placeholder="Search events" [(ngModel)]="searchTerm">
+  </div>
+  <div *ngFor="let event of events | filter: searchTerm" class="event-card mb-3">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img [src]="event.image" class="card-img" alt="Event">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <div class="card-title d-flex justify-content-between align-items-center">
+            <h5>{{ event.title }}</h5>
+            <span class="badge badge-pill badge-info">{{ event.attendees }} attendees</span>
+          </div>
+          <p class="card-text"><small class="text-muted">{{ event.date | date: 'mediumDate' }}</small></p>
+          <p class="card-text">{{ event.description }}</p>
+          <div class="mt-2">
+            <button (click)="navigateToRegistration(event.id)" class="btn btn-primary">Register</button>
+            <button class="btn btn-outline-secondary ml-2">Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<!-- event-listing.component.html -->
+<div class="container mt-4">
+  <h1>Event Booking System</h1>
+  <div class="search-box mb-4">
+    <input type="text" class="form-control" placeholder="Search events" [(ngModel)]="searchTerm">
+  </div>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
+    <div *ngFor="let event of events | filter: searchTerm; let i = index" class="col-12 col-md-6 col-lg-4">
+      <div class="event-card card mb-3 d-flex flex-row">
+        <img [src]="event.image" class="card-img-left" alt="Event" style="width: 100px; object-fit: cover;">
+        <div class="card-body">
+          <h2 class="card-title">{{ event.title }}</h2>
+          <p class="card-text">{{ event.description.slice(0,70)}}...</p>
+          <div class="d-flex justify-content-end align-items-center mt-2">
+            <button (click)="navigateToRegistration(event.id)" class="btn btn-sm btn-primary">Register</button>
+            <button class="btn btn-sm btn-light ms-2">
+              <i class="fas fa-bookmark"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+      <!-- Dynamic page numbers based on events array -->
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </nav>
+</div>
