@@ -24,8 +24,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <sonar.host.url>http://localhost:9000</sonar.host.url>
-        <sonar.login>sqa_812d9c05edb2d5862dc2d984dfb221c812430095</sonar.login>
-        <sonar.projectName>Structural Based Testing - Data Flow Analysis</sonar.projectName>
+        <sonar.token>sqa_812d9c05edb2d5862dc2d984dfb221c812430095</sonar.token>
+        <sonar.projectName>Data Flow Analysis Testing - Saurabh Zinjad</sonar.projectName>
         <sonar.sourceEncoding>UTF-8</sonar.sourceEncoding>
     </properties>
 
