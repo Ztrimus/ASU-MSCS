@@ -1,0 +1,28 @@
+// event-registration.component.scss
+.container {
+    max-width: 600px; // Set a max-width for the form container for better aesthetics
+  }
+  
+  .card {
+    // Customize your card styles here
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-outline-primary {
+    // Style for social media buttons
+    color: #007bff; // Use your primary color here
+    border-color: #007bff; // Border color can be the same as text color
+    &:hover {
+      background-color: #007bff; // Change background on hover
+      color: white;
+    }
+  }
+  
+  .form-label {
+    // Customize your form labels here
+    font-weight: bold;
+  }
+  
+  // Additional styling for your form elements can be placed here
+  
