@@ -1,0 +1,31 @@
+<!-- confirmation.component.html
+<div class="container text-center">
+    <img src="assets/thanks.jpeg" class="mb-3">
+    <h2>Thank You for Registering!</h2>
+    <p>Your registration details have been emailed to you.</p>
+    <button (click)="printConfirmation()" class="btn btn-success">Print Confirmation</button>
+    <button (click)="backToListing()" class="ms-2 btn btn-outline-dark">Back to Events</button>
+  </div>
+   -->
+
+  <!-- confirmation.component.html -->
+<div class="container text-center mt-5" style="position: relative; top: 25%">
+  <div class="mb-4">
+    <button (click)="backToListing()" class="ms-2 btn btn-outline-dark">Back to Events</button>
+</div>
+  <div class="confirmation-card">
+      <h2 class="text-success"><i class="fas fa-heart"></i> Thanks for Registering for the Webinar!</h2>
+      <p class="lead mt-3">You're all set. You'll receive an email with details on attending the webinar. We look forward to seeing you there!</p>
+      
+      <!-- Optional: If you have an image to represent confirmation, include it here -->
+      <!-- <img src="path-to-confirmation-image.png" alt="Confirmation" class="mb-3"> -->
+
+      <!-- Call to Action Buttons -->
+      <div class="mt-4">
+          <button (click)="printConfirmation()" class="btn btn-success">Print Confirmation</button>
+      </div>
+      <div class="mt-1 mb-5">
+        <button (click)="emailDetails()" class="ms-2 btn btn-primary">Email Details</button>
+    </div>
+  </div>
+</div>

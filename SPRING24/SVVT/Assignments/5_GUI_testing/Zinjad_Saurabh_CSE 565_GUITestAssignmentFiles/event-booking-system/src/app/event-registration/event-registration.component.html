@@ -1,0 +1,87 @@
+<!-- event-registration.component.html
+<div class="container">
+    <form (ngSubmit)="submitRegistration()" #registrationForm="ngForm">
+      <img [src]="eventImage" class="mb-3" style="width: 100%; height: auto;">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="registration.name" name="name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" required [(ngModel)]="registration.email" name="email">
+      </div>
+      <button type="submit" class="btn btn-success">Submit</button>
+      <button (click)="backToListing()" class="btn btn-secondary">Back</button>
+    </form>
+  </div>
+   -->
+
+
+<!-- event-registration.component.html -->
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Event Registration</h2>
+  
+  <!-- Social Media Links -->
+  <div class="text-center mb-4">
+    <a href="#" class="mx-2"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" class="mx-2"><i class="fab fa-twitter"></i></a>
+    <a href="#" class="mx-2"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#" class="mx-2"><i class="fas fa-envelope"></i></a>
+  </div>
+  
+  <form (ngSubmit)="submitRegistration()" #registrationForm="ngForm">
+    <div class="row">
+      <!-- Topic and Description -->
+      <div class="col-12 mb-3">
+        <label class="form-label">Topic</label>
+        <input disabled="true" type="text" class="form-control" [(ngModel)]="registration.topic" name="topic" readonly value="Join Test Webinar">
+      </div>
+      <div class="col-12 mb-3">
+        <label class="form-label">Description</label>
+        <textarea disabled="true" class="form-control" [(ngModel)]="registration.description" name="description" rows="1" readonly>Deneeme yapmıyorum</textarea>
+      </div>
+      <div class="col-12 mb-3">
+        <label class="form-label">Time</label>
+        <input disabled="true" type="text" class="form-control" [(ngModel)]="registration.time" name="time" readonly value="Jan 4, 2021 01:00 PM in Istanbul">
+      </div>
+    </div>
+    
+    <div class="row">
+      <!-- Name and Email Fields -->
+      <div class="col-md-6 mb-3">
+        <label class="form-label">First Name *</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="registration.name" name="name">
+      </div>
+      <div class="col-md-6 mb-3">
+        <label class="form-label">Last Name *</label>
+        <input type="text" class="form-control" required [(ngModel)]="registration.lastName" name="lastName">
+      </div>
+      <div class="col-md-6 mb-3">
+        <label class="form-label">Email Address *</label>
+        <input type="email" class="form-control" id="email" required [(ngModel)]="registration.email" name="email">
+      </div>
+      <div class="col-md-6 mb-3">
+        <label class="form-label">Confirm Email Address *</label>
+        <input type="email" class="form-control" required [(ngModel)]="registration.confirmEmail" name="confirmEmail">
+      </div>
+      <div class="col-md-6 mb-3">
+        <label class="form-label">Address</label>
+        <input type="text" class="form-control" [(ngModel)]="registration.address" name="address">
+      </div>
+      <div class="col-md-6 mb-3">
+        <label class="form-label">City</label>
+        <input type="text" class="form-control" [(ngModel)]="registration.city" name="city">
+      </div>
+    </div>
+    
+    <div class="text-center">
+      <!-- Agreement and Submit -->
+      <div class="form-check mb-3">
+        <input type="checkbox" class="form-check-input" id="agreement" required [(ngModel)]="registration.agreement" name="agreement">
+        <label class="form-check-label" for="agreement">By registering, I agree to the <a href="#">Privacy Statement</a> and <a href="#">Terms of Service</a>.</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Register</button>
+      <button type="button" class="btn btn-outline-dark ms-2" (click)="backToListing()">Back</button>
+    </div>
+  </form>
+</div>
